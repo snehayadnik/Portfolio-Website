@@ -1,12 +1,30 @@
 import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 
+interface ContactInfo {
+  email: string;
+  linkedin: string;
+}
+
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [contactInfo, setContactInfo] = useState<ContactInfo>({
+    email: '',
+    linkedin: ''
+  });
 
   useEffect(() => {
     setIsVisible(true);
+    loadContactInfo();
   }, []);
+
+  const loadContactInfo = () => {
+    const stored = localStorage.getItem('contactInfo');
+    if (stored) {
+      const info = JSON.parse(stored);
+      setContactInfo(info);
+    }
+  };
 
   const scrollToNext = () => {
     const element = document.getElementById('skills');
@@ -52,22 +70,26 @@ const Hero = () => {
             >
               <Github size={24} />
             </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 text-white rounded-full hover:scale-110 transition-transform"
-              style={{ backgroundColor: 'rgba(82, 149, 228, 1)' }}
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:your.email@example.com"
-              className="p-3 text-white rounded-full hover:scale-110 transition-transform"
-              style={{ backgroundColor: 'rgba(82, 149, 228, 1)' }}
-            >
-              <Mail size={24} />
-            </a>
+            {contactInfo.linkedin && (
+              <a
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-white rounded-full hover:scale-110 transition-transform"
+                style={{ backgroundColor: 'rgba(82, 149, 228, 1)' }}
+              >
+                <Linkedin size={24} />
+              </a>
+            )}
+            {contactInfo.email && (
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="p-3 text-white rounded-full hover:scale-110 transition-transform"
+                style={{ backgroundColor: 'rgba(82, 149, 228, 1)' }}
+              >
+                <Mail size={24} />
+              </a>
+            )}
           </div>
 
           <button

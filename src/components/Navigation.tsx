@@ -14,6 +14,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'journey', label: 'Journey' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   const scrollToSection = (id: string) => {
