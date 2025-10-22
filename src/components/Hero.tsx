@@ -53,11 +53,11 @@ const Hero = () => {
           </h1>
 
           <div className="text-2xl md:text-3xl font-medium mb-6" style={{ color: 'rgba(82, 149, 228, 1)' }}>
-            Android Developer
+            Mobile App Developer | AI Enthusiast
           </div>
 
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-            Specializing in IoT-enabled Android applications at Whirlpool GTEC. Passionate about building scalable mobile solutions with Kotlin, Jetpack Compose, and modern architecture patterns.
+            Building user-focused, scalable mobile applications with Kotlin, MVVM, and Jetpack Compose. Currently developing IoT-enabled Android applications at Whirlpool, creating seamless experiences for connected devices. Passionate about integrating AI into mobile to drive personalization, automation, and intelligent decision-making.
           </p>
 
           <div className="flex items-center justify-center gap-4 mb-12">
