@@ -43,8 +43,21 @@ const Hero = () => {
           }`}
         >
           <div className="mb-8 inline-block">
-            <div className="w-32 h-32 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(82, 149, 228, 1), rgba(82, 149, 228, 0.7))' }}>
-              SE
+            <div className="w-32 h-32 rounded-full flex items-center justify-center overflow-hidden shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(82, 149, 228, 1), rgba(82, 149, 228, 0.7))' }}>
+              <img
+                src="/profile.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLDivElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-full h-full flex items-center justify-center text-white text-4xl font-bold" style={{ display: 'none' }}>
+                SE
+              </div>
             </div>
           </div>
 
