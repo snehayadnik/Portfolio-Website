@@ -11,7 +11,8 @@ const Navigation = ({ activeSection }: NavigationProps) => {
   const sections = [
     { id: 'hero', label: 'Home' },
     { id: 'skills', label: 'Skills' },
-    { id: 'journey', label: 'Journey' },
+    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
