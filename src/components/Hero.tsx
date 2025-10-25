@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative pt-16"
+      className="min-h-screen flex items-center justify-center relative pt-12"
     >
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div

@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 px-6"
+      className="min-h-screen flex items-center justify-center py-8 px-6"
     >
       <div className="max-w-4xl w-full">
         <div
@@ -54,7 +54,7 @@ const Contact = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
             Get in Touch
           </h2>
           <p className="text-lg mb-12 text-center" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>

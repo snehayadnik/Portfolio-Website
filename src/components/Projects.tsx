@@ -44,12 +44,12 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-8"
       style={{ backgroundColor: 'rgba(10, 17, 30, 1)' }}
     >
       <div className="max-w-6xl mx-auto px-6 w-full">
         <h2
-          className={`text-4xl md:text-5xl font-bold text-white text-center mb-16 transform transition-all duration-700 ${
+          className={`text-3xl md:text-4xl font-bold text-white text-center mb-12 transform transition-all duration-700 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
@@ -133,19 +133,6 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <p className="mb-6" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Interested in working together?</p>
-          <a
-            href="mailto:your.email@example.com"
-            className="inline-block px-8 py-3 text-white rounded-lg transition-colors text-lg font-medium"
-            style={{ backgroundColor: 'rgba(82, 149, 228, 1)' }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(82, 149, 228, 0.8)'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(82, 149, 228, 1)'}
-          >
-            Get In Touch
-          </a>
         </div>
       </div>
     </section>
