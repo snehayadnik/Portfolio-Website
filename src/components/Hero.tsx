@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative pt-16"
+      className="min-h-screen flex items-center justify-center relative pt-12"
     >
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div
@@ -42,37 +42,31 @@ const Hero = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <div className="mb-8 inline-block">
-            <div className="w-32 h-32 rounded-full flex items-center justify-center overflow-hidden shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(82, 149, 228, 1), rgba(82, 149, 228, 0.7))' }}>
-              <img
-                src="/profile.jpg"
-                alt="Profile"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const fallback = target.nextElementSibling as HTMLDivElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              <div className="w-full h-full flex items-center justify-center text-white text-4xl font-bold" style={{ display: 'none' }}>
-                SE
-              </div>
-            </div>
-          </div>
+          {/* Profile Image */}
+<div className="mb-10 inline-block">
+  <div className="w-44 h-44 rounded-full overflow-hidden shadow-xl bg-white">
+    <img
+      src="/profile.png"
+      alt="Profile"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-            Software Engineer
-          </h1>
+<h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+  Software Engineer
+</h1>
 
-          <div className="text-2xl md:text-3xl font-medium mb-6" style={{ color: 'rgba(82, 149, 228, 1)' }}>
-            Mobile App Developer | AI Enthusiast
-          </div>
+<div className="text-2xl md:text-3xl font-medium mb-6" style={{ color: 'rgba(82, 149, 228, 1)' }}>
+  Mobile App Developer | AI Enthusiast
+</div>
 
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-            Building user-focused, scalable mobile applications with Kotlin, MVVM, and Jetpack Compose. Currently developing IoT-enabled Android applications at Whirlpool, creating seamless experiences for connected devices. Passionate about integrating AI into mobile to drive personalization, automation, and intelligent decision-making.
-          </p>
+<p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-justify" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+  Building user-focused, scalable mobile applications with Kotlin, MVVM, and Jetpack Compose. Currently developing IoT-enabled Android applications at Whirlpool, creating seamless experiences for connected devices. Passionate about integrating AI into mobile to drive personalization, automation, and intelligent decision-making.
+</p>
 
+
+          {/* Icons */}
           <div className="flex items-center justify-center gap-4 mb-12">
             <a
               href="https://github.com"

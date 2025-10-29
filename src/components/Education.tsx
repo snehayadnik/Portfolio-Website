@@ -43,11 +43,11 @@ const Education = () => {
     <section
       id="education"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-8"
       style={{ backgroundColor: 'rgba(10, 17, 30, 1)' }}
     >
       <div className="max-w-4xl mx-auto px-6 w-full">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-20">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
           Education
         </h2>
 
