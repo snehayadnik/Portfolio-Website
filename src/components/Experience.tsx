@@ -16,7 +16,7 @@ const experienceItems = [
     organization: "Whirlpool GTEC, Pune",
     period: "Jan 2024 - July 2024",
     description:
-      "Maintained business applications for EMEA region, developed IoT-driven native Android applications, and collaborated with UI/UX designers for user-centric app design",
+      "● Developed native Android applications for smart home appliances using Kotlin, MVVM, Jetpack Compose, improving overall UI responsiveness and user engagement.\n● Built IoT connectivity features using Bluetooth LE and Wi-Fi, enabling real-time appliance control through mobile devices.\n● Worked on feature enhancements and bug fixes for production apps used across the EMEA region, improving app stability and performance.\n● Collaborated with cross-functional teams (firmware, hardware, and QA) to deliver features aligned with product roadmap timelines.\n● Assisted in migrating legacy components to a modular architecture, reducing development complexity and improving maintainability.",
   },
 ];
 
@@ -61,9 +61,13 @@ const Experience = () => {
         </h2>
 
         <div className="relative flex flex-col items-center">
+          {/* Timeline line that stops before last card */}
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5"
-            style={{ backgroundColor: "rgba(82, 149, 228, 0.3)" }}
+            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5"
+            style={{
+              backgroundColor: "rgba(82, 149, 228, 0.3)",
+              height: "calc(100% - 6rem)", // reduces length to stop below the last circle
+            }}
           />
 
           {experienceItems.map((item, index) => {
@@ -74,8 +78,11 @@ const Experience = () => {
               <div
                 key={index}
                 ref={(el) => (itemRefs.current[index] = el)}
-                className="relative mb-16 w-full"
+                className={`relative ${
+                  index === experienceItems.length - 1 ? "mb-0" : "mb-16"
+                } w-full`}
               >
+                {/* Circle Icon */}
                 <div
                   className="absolute left-1/2 transform -translate-x-1/2 top-0 w-16 h-16 rounded-full flex items-center justify-center text-white transition-all duration-700 z-10"
                   style={{
@@ -87,13 +94,16 @@ const Experience = () => {
                   <Icon size={28} />
                 </div>
 
+                {/* Card */}
                 <div
                   className="rounded-2xl shadow-2xl p-8 md:p-10 transform transition-all duration-700 hover:shadow-blue-500/10 hover:scale-[1.02] text-center mt-20"
                   style={{
                     backgroundColor: "rgba(20, 30, 48, 1)",
                     border: "1px solid rgba(82, 149, 228, 0.3)",
                     opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateY(0)" : "translateY(40px)",
+                    transform: isVisible
+                      ? "translateY(0)"
+                      : "translateY(40px)",
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
