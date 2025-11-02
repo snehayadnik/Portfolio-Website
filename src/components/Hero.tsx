@@ -44,9 +44,9 @@ const Hero = () => {
         >
           {/* Profile Image */}
 <div className="mb-10 inline-block">
-  <div className="w-44 h-44 rounded-full overflow-hidden shadow-xl bg-white">
+  <div className="w-44 h-44 rounded-full overflow-hidden shadow-xl">
     <img
-      src="/profile.png"
+      src="/Screenshot_2025-10-25_110652-removebg-preview.png"
       alt="Profile"
       className="w-full h-full object-cover"
     />
