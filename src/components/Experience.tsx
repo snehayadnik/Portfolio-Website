@@ -62,8 +62,11 @@ const Experience = () => {
 
         <div className="relative flex flex-col items-center">
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5"
-            style={{ backgroundColor: "rgba(82, 149, 228, 0.3)" }}
+            className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5"
+            style={{
+              backgroundColor: "rgba(82, 149, 228, 0.3)",
+              height: `calc(${experienceItems.length - 1} * 220px)`
+            }}
           />
 
           {experienceItems.map((item, index) => {
