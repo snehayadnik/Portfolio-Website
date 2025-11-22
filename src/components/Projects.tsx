@@ -44,7 +44,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-8"
+      className="min-h-screen flex items-center justify-center py-4"
       style={{ backgroundColor: 'rgba(10, 17, 30, 1)' }}
     >
       <div className="max-w-6xl mx-auto px-6 w-full">

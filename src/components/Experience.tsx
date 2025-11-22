@@ -52,7 +52,7 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-16 px-4"
+      className="min-h-screen flex items-center justify-center py-4 px-4"
       style={{ backgroundColor: "rgba(10, 17, 30, 1)" }}
     >
       <div className="max-w-7xl mx-auto w-full">
