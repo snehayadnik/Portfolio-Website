@@ -73,10 +73,10 @@ const Contact = () => {
               <div className="flex items-center gap-3">
                 <i className="fas fa-phone text-lg"></i>
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+91 9309578687"
                   className="hover:underline hover:text-gray-300 transition"
                 >
-                  +91 12345 67890
+                  +91 9309578687
                 </a>
               </div>
 
@@ -89,7 +89,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="hover:underline hover:text-gray-300 transition"
                 >
-                  linkedin.com/in/yourprofile
+                  linkedin.com/in/sneha-yadnik
                 </a>
               </div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
                   href="mailto:youremail@example.com"
                   className="hover:underline hover:text-gray-300 transition"
                 >
-                  youremail@example.com
+                  snehayadnik9@gmail.com
                 </a>
               </div>
 
