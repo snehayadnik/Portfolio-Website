@@ -6,7 +6,7 @@ const projects = [
     title: "Mood Mate",
     description:
       "Developed a native Android journaling app that analyzes user mood using on-device sentiment detection via Google ML Kit, providing personalized wellness recommendations. ",
-    tech: ["Kotlin", "Jetpack Compose", "Firebase", "MLKit"],
+    tech: ["Kotlin", "Jetpack Compose", "Firebase", "MLKit", "Java"],
     github: "#",
     demo: "#",
   },
