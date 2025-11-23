@@ -80,7 +80,9 @@ const Projects = () => {
                 key={index}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform flex-shrink-0 w-96 ${
+                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform flex-shrink-0 ${
+                  index < 2 ? "w-[calc(50%-16px)]" : "w-96"
+                } ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
