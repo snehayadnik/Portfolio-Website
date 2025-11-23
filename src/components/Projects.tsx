@@ -18,21 +18,6 @@ const projects = [
     github: "#",
     demo: "#",
   },
-  {
-    title: "SIP Calculator",
-    description:
-      "Intuitive Android investment app with SIP, Step-Up, Lumpsum, and SWP calculators enabling seamless user interactions and accurate financial projections with in-app educational module",
-    tech: [
-      "Kotlin",
-      "XML",
-      "RecyclerView",
-      "ViewPager2",
-      "Fragments",
-      "View Binding",
-    ],
-    github: "#",
-    demo: "#",
-  },
 ];
 
 const Projects = () => {
