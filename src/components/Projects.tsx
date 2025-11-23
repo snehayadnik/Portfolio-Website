@@ -73,24 +73,25 @@ const Projects = () => {
           Personal Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-              style={{
-                backgroundColor: "rgba(20, 30, 48, 1)",
-                border: "1px solid rgba(82, 149, 228, 0.3)",
-                transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
-                transitionDelay: `${index * 100}ms`,
-              }}
-            >
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex gap-8 pb-4" style={{ minWidth: "min-content" }}>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform flex-shrink-0 w-96 ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  backgroundColor: "rgba(20, 30, 48, 1)",
+                  border: "1px solid rgba(82, 149, 228, 0.3)",
+                  transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
               <div
                 className="flex items-center justify-center transition-all duration-500"
                 style={{
@@ -169,7 +170,8 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
