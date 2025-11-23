@@ -52,7 +52,7 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-16 px-4"
+      className="min-h-screen flex items-center justify-center py-4 px-4"
       style={{ backgroundColor: "rgba(10, 17, 30, 1)" }}
     >
       <div className="max-w-7xl mx-auto w-full">
@@ -66,7 +66,7 @@ const Experience = () => {
             className="absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5"
             style={{
               backgroundColor: "rgba(82, 149, 228, 0.3)",
-              height: "calc(100% - 6rem)", // reduces length to stop below the last circle
+              height: `calc(${experienceItems.length - 1} * 220px)`
             }}
           />
 
